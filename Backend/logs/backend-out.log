@@ -1,0 +1,1124 @@
+2025-06-20T04:58:13: 🔌 Conectando a la base de datos...
+2025-06-20T04:58:13: ✅ Conectado a PostgreSQL
+2025-06-20T04:58:13: 🔍 Test de conexión exitoso: 2025-06-20T08:58:13.445Z
+2025-06-20T04:58:13: 🚀 Servidor corriendo en puerto 3001
+2025-06-20T04:58:13: 📍 URL: http://localhost:3001
+2025-06-20T04:58:13: 🌟 Ambiente: production
+2025-06-20T04:58:13: ✅ Servidor listo para recibir peticiones
+2025-06-20T05:00:28: 🔌 Conectando a la base de datos...
+2025-06-20T05:00:28: ✅ Conectado a PostgreSQL
+2025-06-20T05:00:28: 🔍 Test de conexión exitoso: 2025-06-20T09:00:28.107Z
+2025-06-20T05:00:28: 🚀 Servidor corriendo en puerto 3001
+2025-06-20T05:00:28: 📍 URL: http://localhost:3001
+2025-06-20T05:00:28: 🌟 Ambiente: production
+2025-06-20T05:00:28: ✅ Servidor listo para recibir peticiones
+2025-06-20T05:03:42: 🔌 Conectando a la base de datos...
+2025-06-20T05:03:42: ✅ Conectado a PostgreSQL
+2025-06-20T05:03:42: 🔍 Test de conexión exitoso: 2025-06-20T09:03:42.523Z
+2025-06-20T05:03:42: 🚀 Servidor corriendo en puerto 3001
+2025-06-20T05:03:42: 📍 URL: http://localhost:3001
+2025-06-20T05:03:42: 🌟 Ambiente: production
+2025-06-20T05:03:42: ✅ Servidor listo para recibir peticiones
+2025-06-20T05:03:59: 📨 POST /api/auth/login - 2025-06-20T09:03:59.079Z
+2025-06-20T05:03:59: 📊 Query ejecutada: {
+2025-06-20T05:03:59:   text: '\n' +
+2025-06-20T05:03:59:     '      SELECT * FROM usuarios \n' +
+2025-06-20T05:03:59:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-20T05:03:59:     '      AND is_active = true\n' +
+2025-06-20T05:03:59:     '    ',
+2025-06-20T05:03:59:   duration: '21ms',
+2025-06-20T05:03:59:   rows: 1
+2025-06-20T05:03:59: }
+2025-06-20T05:03:59: 📊 Query ejecutada: {
+2025-06-20T05:03:59:   text: '\n' +
+2025-06-20T05:03:59:     '      UPDATE usuarios \n' +
+2025-06-20T05:03:59:     '      SET last_login = CURRENT_TIMESTAMP \n' +
+2025-06-20T05:03:59:     '      WHERE user_id = $1\n' +
+2025-06-20T05:03:59:     '      RETURNING last_login\n' +
+2025-06-20T05:03:59:     '    ',
+2025-06-20T05:03:59:   duration: '4ms',
+2025-06-20T05:03:59:   rows: 1
+2025-06-20T05:03:59: }
+2025-06-20T05:03:59: 📊 Query ejecutada: {
+2025-06-20T05:03:59:   text: '\n' +
+2025-06-20T05:03:59:     '      INSERT INTO refresh_tokens (token, user_id, expires_at, user_agent, ip_address)\n' +
+2025-06-20T05:03:59:     '      VALUES ($1, $2, $3, $4, $5)\n' +
+2025-06-20T05:03:59:     '      RETURNING token_id, token, user_id, issued_at, expires_at\n' +
+2025-06-20T05:03:59:     '    ',
+2025-06-20T05:03:59:   duration: '7ms',
+2025-06-20T05:03:59:   rows: 1
+2025-06-20T05:03:59: }
+2025-06-20T05:04:35: 📨 POST /api/auth/login - 2025-06-20T09:04:35.744Z
+2025-06-20T05:04:35: ✅ Conectado a PostgreSQL
+2025-06-20T05:04:35: 📊 Query ejecutada: {
+2025-06-20T05:04:35:   text: '\n' +
+2025-06-20T05:04:35:     '      SELECT * FROM usuarios \n' +
+2025-06-20T05:04:35:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-20T05:04:35:     '      AND is_active = true\n' +
+2025-06-20T05:04:35:     '    ',
+2025-06-20T05:04:35:   duration: '27ms',
+2025-06-20T05:04:35:   rows: 1
+2025-06-20T05:04:35: }
+2025-06-20T05:04:35: 📊 Query ejecutada: {
+2025-06-20T05:04:35:   text: '\n' +
+2025-06-20T05:04:35:     '      UPDATE usuarios \n' +
+2025-06-20T05:04:35:     '      SET last_login = CURRENT_TIMESTAMP \n' +
+2025-06-20T05:04:35:     '      WHERE user_id = $1\n' +
+2025-06-20T05:04:35:     '      RETURNING last_login\n' +
+2025-06-20T05:04:35:     '    ',
+2025-06-20T05:04:35:   duration: '1ms',
+2025-06-20T05:04:35:   rows: 1
+2025-06-20T05:04:35: }
+2025-06-20T05:04:35: 📊 Query ejecutada: {
+2025-06-20T05:04:35:   text: '\n' +
+2025-06-20T05:04:35:     '      INSERT INTO refresh_tokens (token, user_id, expires_at, user_agent, ip_address)\n' +
+2025-06-20T05:04:35:     '      VALUES ($1, $2, $3, $4, $5)\n' +
+2025-06-20T05:04:35:     '      RETURNING token_id, token, user_id, issued_at, expires_at\n' +
+2025-06-20T05:04:35:     '    ',
+2025-06-20T05:04:35:   duration: '1ms',
+2025-06-20T05:04:35:   rows: 1
+2025-06-20T05:04:35: }
+2025-06-20T05:04:37: 📨 GET /api/auth/verify - 2025-06-20T09:04:37.787Z
+2025-06-20T05:04:37: 📊 Query ejecutada: {
+2025-06-20T05:04:37:   text: '\n' +
+2025-06-20T05:04:37:     '      SELECT user_id, username, email, telefono, imagen_perfil, \n' +
+2025-06-20T05:04:37:     '             provider, provider_id, created_at, updated_at,\n' +
+2025-06-20T05:04:37:     '             premium, premium_expiration, free_coins, paid_coins,\n' +
+2025-06-20T05:04:37:     '             lifetime_session, last_login, is_active\n' +
+2025-06-20T05:04:37:     '      FROM usuarios \n' +
+2025-06-20T05:04:37:     '      WHERE user_id = $1 AND is_active = true\n' +
+2025-06-20T05:04:37:     '    ',
+2025-06-20T05:04:37:   duration: '1ms',
+2025-06-20T05:04:37:   rows: 1
+2025-06-20T05:04:37: }
+2025-06-20T05:04:40: 📨 GET /api/auth/verify - 2025-06-20T09:04:40.273Z
+2025-06-20T05:04:40: 📊 Query ejecutada: {
+2025-06-20T05:04:40:   text: '\n' +
+2025-06-20T05:04:40:     '      SELECT user_id, username, email, telefono, imagen_perfil, \n' +
+2025-06-20T05:04:40:     '             provider, provider_id, created_at, updated_at,\n' +
+2025-06-20T05:04:40:     '             premium, premium_expiration, free_coins, paid_coins,\n' +
+2025-06-20T05:04:40:     '             lifetime_session, last_login, is_active\n' +
+2025-06-20T05:04:40:     '      FROM usuarios \n' +
+2025-06-20T05:04:40:     '      WHERE user_id = $1 AND is_active = true\n' +
+2025-06-20T05:04:40:     '    ',
+2025-06-20T05:04:40:   duration: '1ms',
+2025-06-20T05:04:40:   rows: 1
+2025-06-20T05:04:40: }
+2025-06-20T17:50:14: 🔌 Conectando a la base de datos...
+2025-06-20T17:50:14: ✅ Conectado a PostgreSQL
+2025-06-20T17:50:14: 🔍 Test de conexión exitoso: 2025-06-20T21:50:14.303Z
+2025-06-20T17:50:14: 🚀 Servidor corriendo en puerto 3001
+2025-06-20T17:50:14: 📍 URL: http://localhost:3001
+2025-06-20T17:50:14: 🌟 Ambiente: production
+2025-06-20T17:50:14: ✅ Servidor listo para recibir peticiones
+2025-06-21T16:23:53: 🔌 Conectando a la base de datos...
+2025-06-21T16:23:53: ✅ Conectado a PostgreSQL
+2025-06-21T16:23:53: 🔍 Test de conexión exitoso: 2025-06-21T20:23:53.524Z
+2025-06-21T16:23:53: 🚀 Servidor corriendo en puerto 3001
+2025-06-21T16:23:53: 📍 URL: http://localhost:3001
+2025-06-21T16:23:53: 🌟 Ambiente: production
+2025-06-21T16:23:53: ✅ Servidor listo para recibir peticiones
+2025-06-22T16:28:01: 🔌 Conectando a la base de datos...
+2025-06-22T16:28:01: ✅ Conectado a PostgreSQL
+2025-06-22T16:28:01: 🔍 Test de conexión exitoso: 2025-06-22T20:28:01.326Z
+2025-06-22T16:28:01: 🚀 Servidor corriendo en puerto 3001
+2025-06-22T16:28:01: 📍 URL: http://localhost:3001
+2025-06-22T16:28:01: 🌟 Ambiente: production
+2025-06-22T16:28:01: ✅ Servidor listo para recibir peticiones
+2025-06-23T19:05:39: 🔌 Conectando a la base de datos...
+2025-06-23T19:05:39: ✅ Conectado a PostgreSQL
+2025-06-23T19:05:39: 🔍 Test de conexión exitoso: 2025-06-23T23:05:39.666Z
+2025-06-23T19:05:39: 🚀 Servidor corriendo en puerto 3001
+2025-06-23T19:05:39: 📍 URL: http://localhost:3001
+2025-06-23T19:05:39: 🌟 Ambiente: production
+2025-06-23T19:05:39: ✅ Servidor listo para recibir peticiones
+2025-06-24T15:45:06: 🔌 Conectando a la base de datos...
+2025-06-24T15:45:06: ✅ Conectado a PostgreSQL
+2025-06-24T15:45:06: 🔍 Test de conexión exitoso: 2025-06-24T19:45:06.148Z
+2025-06-24T15:45:06: 🚀 Servidor corriendo en puerto 3001
+2025-06-24T15:45:06: 📍 URL: http://localhost:3001
+2025-06-24T15:45:06: 🌟 Ambiente: production
+2025-06-24T15:45:06: ✅ Servidor listo para recibir peticiones
+2025-06-24T17:43:54: 📨 POST /api/auth/login - 2025-06-24T21:43:54.425Z
+2025-06-24T17:43:54: ✅ Conectado a PostgreSQL
+2025-06-24T17:43:54: 📊 Query ejecutada: {
+2025-06-24T17:43:54:   text: '\n' +
+2025-06-24T17:43:54:     '      SELECT * FROM usuarios \n' +
+2025-06-24T17:43:54:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-24T17:43:54:     '      AND is_active = true\n' +
+2025-06-24T17:43:54:     '    ',
+2025-06-24T17:43:54:   duration: '54ms',
+2025-06-24T17:43:54:   rows: 1
+2025-06-24T17:43:54: }
+2025-06-24T17:43:54: 📊 Query ejecutada: {
+2025-06-24T17:43:54:   text: '\n' +
+2025-06-24T17:43:54:     '      UPDATE usuarios \n' +
+2025-06-24T17:43:54:     '      SET last_login = CURRENT_TIMESTAMP \n' +
+2025-06-24T17:43:54:     '      WHERE user_id = $1\n' +
+2025-06-24T17:43:54:     '      RETURNING last_login\n' +
+2025-06-24T17:43:54:     '    ',
+2025-06-24T17:43:54:   duration: '7ms',
+2025-06-24T17:43:54:   rows: 1
+2025-06-24T17:43:54: }
+2025-06-24T17:43:54: 📊 Query ejecutada: {
+2025-06-24T17:43:54:   text: '\n' +
+2025-06-24T17:43:54:     '      INSERT INTO refresh_tokens (token, user_id, expires_at, user_agent, ip_address)\n' +
+2025-06-24T17:43:54:     '      VALUES ($1, $2, $3, $4, $5)\n' +
+2025-06-24T17:43:54:     '      RETURNING token_id, token, user_id, issued_at, expires_at\n' +
+2025-06-24T17:43:54:     '    ',
+2025-06-24T17:43:54:   duration: '9ms',
+2025-06-24T17:43:54:   rows: 1
+2025-06-24T17:43:54: }
+2025-06-24T17:44:08: 📨 POST /api/auth/logout - 2025-06-24T21:44:08.706Z
+2025-06-24T17:44:08: 📊 Query ejecutada: {
+2025-06-24T17:44:08:   text: '\n' +
+2025-06-24T17:44:08:     '      UPDATE refresh_tokens \n' +
+2025-06-24T17:44:08:     '      SET is_revoked = true \n' +
+2025-06-24T17:44:08:     '      WHERE token = $1\n' +
+2025-06-24T17:44:08:     '      RETURNING token_id\n' +
+2025-06-24T17:44:08:     '    ',
+2025-06-24T17:44:08:   duration: '3ms',
+2025-06-24T17:44:08:   rows: 1
+2025-06-24T17:44:08: }
+2025-06-24T18:39:17: 📨 POST /api/auth/login - 2025-06-24T22:39:17.126Z
+2025-06-24T18:39:17: ✅ Conectado a PostgreSQL
+2025-06-24T18:39:17: 📊 Query ejecutada: {
+2025-06-24T18:39:17:   text: '\n' +
+2025-06-24T18:39:17:     '      SELECT * FROM usuarios \n' +
+2025-06-24T18:39:17:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-24T18:39:17:     '      AND is_active = true\n' +
+2025-06-24T18:39:17:     '    ',
+2025-06-24T18:39:17:   duration: '27ms',
+2025-06-24T18:39:17:   rows: 1
+2025-06-24T18:39:17: }
+2025-06-24T18:39:17: 📊 Query ejecutada: {
+2025-06-24T18:39:17:   text: '\n' +
+2025-06-24T18:39:17:     '      UPDATE usuarios \n' +
+2025-06-24T18:39:17:     '      SET last_login = CURRENT_TIMESTAMP \n' +
+2025-06-24T18:39:17:     '      WHERE user_id = $1\n' +
+2025-06-24T18:39:17:     '      RETURNING last_login\n' +
+2025-06-24T18:39:17:     '    ',
+2025-06-24T18:39:17:   duration: '2ms',
+2025-06-24T18:39:17:   rows: 1
+2025-06-24T18:39:17: }
+2025-06-24T18:39:17: 📊 Query ejecutada: {
+2025-06-24T18:39:17:   text: '\n' +
+2025-06-24T18:39:17:     '      INSERT INTO refresh_tokens (token, user_id, expires_at, user_agent, ip_address)\n' +
+2025-06-24T18:39:17:     '      VALUES ($1, $2, $3, $4, $5)\n' +
+2025-06-24T18:39:17:     '      RETURNING token_id, token, user_id, issued_at, expires_at\n' +
+2025-06-24T18:39:17:     '    ',
+2025-06-24T18:39:17:   duration: '1ms',
+2025-06-24T18:39:17:   rows: 1
+2025-06-24T18:39:17: }
+2025-06-24T18:41:43: 📨 POST /api/auth/logout - 2025-06-24T22:41:43.527Z
+2025-06-24T18:41:43: ✅ Conectado a PostgreSQL
+2025-06-24T18:41:43: 📊 Query ejecutada: {
+2025-06-24T18:41:43:   text: '\n' +
+2025-06-24T18:41:43:     '      UPDATE refresh_tokens \n' +
+2025-06-24T18:41:43:     '      SET is_revoked = true \n' +
+2025-06-24T18:41:43:     '      WHERE token = $1\n' +
+2025-06-24T18:41:43:     '      RETURNING token_id\n' +
+2025-06-24T18:41:43:     '    ',
+2025-06-24T18:41:43:   duration: '26ms',
+2025-06-24T18:41:43:   rows: 1
+2025-06-24T18:41:43: }
+2025-06-24T18:41:57: 📨 POST /api/auth/login - 2025-06-24T22:41:57.659Z
+2025-06-24T18:41:57: 📊 Query ejecutada: {
+2025-06-24T18:41:57:   text: '\n' +
+2025-06-24T18:41:57:     '      SELECT * FROM usuarios \n' +
+2025-06-24T18:41:57:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-24T18:41:57:     '      AND is_active = true\n' +
+2025-06-24T18:41:57:     '    ',
+2025-06-24T18:41:57:   duration: '3ms',
+2025-06-24T18:41:57:   rows: 1
+2025-06-24T18:41:57: }
+2025-06-24T18:41:57: 📊 Query ejecutada: {
+2025-06-24T18:41:57:   text: '\n' +
+2025-06-24T18:41:57:     '      UPDATE usuarios \n' +
+2025-06-24T18:41:57:     '      SET last_login = CURRENT_TIMESTAMP \n' +
+2025-06-24T18:41:57:     '      WHERE user_id = $1\n' +
+2025-06-24T18:41:57:     '      RETURNING last_login\n' +
+2025-06-24T18:41:57:     '    ',
+2025-06-24T18:41:57:   duration: '1ms',
+2025-06-24T18:41:57:   rows: 1
+2025-06-24T18:41:57: }
+2025-06-24T18:41:57: 📊 Query ejecutada: {
+2025-06-24T18:41:57:   text: '\n' +
+2025-06-24T18:41:57:     '      INSERT INTO refresh_tokens (token, user_id, expires_at, user_agent, ip_address)\n' +
+2025-06-24T18:41:57:     '      VALUES ($1, $2, $3, $4, $5)\n' +
+2025-06-24T18:41:57:     '      RETURNING token_id, token, user_id, issued_at, expires_at\n' +
+2025-06-24T18:41:57:     '    ',
+2025-06-24T18:41:57:   duration: '2ms',
+2025-06-24T18:41:57:   rows: 1
+2025-06-24T18:41:57: }
+2025-06-24T18:42:12: 📨 POST /api/auth/logout - 2025-06-24T22:42:12.117Z
+2025-06-24T18:42:12: 📊 Query ejecutada: {
+2025-06-24T18:42:12:   text: '\n' +
+2025-06-24T18:42:12:     '      UPDATE refresh_tokens \n' +
+2025-06-24T18:42:12:     '      SET is_revoked = true \n' +
+2025-06-24T18:42:12:     '      WHERE token = $1\n' +
+2025-06-24T18:42:12:     '      RETURNING token_id\n' +
+2025-06-24T18:42:12:     '    ',
+2025-06-24T18:42:12:   duration: '0ms',
+2025-06-24T18:42:12:   rows: 1
+2025-06-24T18:42:12: }
+2025-06-24T18:42:17: 📨 POST /api/auth/login - 2025-06-24T22:42:17.272Z
+2025-06-24T18:42:17: 📊 Query ejecutada: {
+2025-06-24T18:42:17:   text: '\n' +
+2025-06-24T18:42:17:     '      SELECT * FROM usuarios \n' +
+2025-06-24T18:42:17:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-24T18:42:17:     '      AND is_active = true\n' +
+2025-06-24T18:42:17:     '    ',
+2025-06-24T18:42:17:   duration: '0ms',
+2025-06-24T18:42:17:   rows: 1
+2025-06-24T18:42:17: }
+2025-06-24T18:42:17: 📊 Query ejecutada: {
+2025-06-24T18:42:17:   text: '\n' +
+2025-06-24T18:42:17:     '      UPDATE usuarios \n' +
+2025-06-24T18:42:17:     '      SET last_login = CURRENT_TIMESTAMP \n' +
+2025-06-24T18:42:17:     '      WHERE user_id = $1\n' +
+2025-06-24T18:42:17:     '      RETURNING last_login\n' +
+2025-06-24T18:42:17:     '    ',
+2025-06-24T18:42:17:   duration: '0ms',
+2025-06-24T18:42:17:   rows: 1
+2025-06-24T18:42:17: }
+2025-06-24T18:42:17: 📊 Query ejecutada: {
+2025-06-24T18:42:17:   text: '\n' +
+2025-06-24T18:42:17:     '      INSERT INTO refresh_tokens (token, user_id, expires_at, user_agent, ip_address)\n' +
+2025-06-24T18:42:17:     '      VALUES ($1, $2, $3, $4, $5)\n' +
+2025-06-24T18:42:17:     '      RETURNING token_id, token, user_id, issued_at, expires_at\n' +
+2025-06-24T18:42:17:     '    ',
+2025-06-24T18:42:17:   duration: '1ms',
+2025-06-24T18:42:17:   rows: 1
+2025-06-24T18:42:17: }
+2025-06-24T18:47:28: 📨 POST /api/transactions/pomodoro - 2025-06-24T22:47:28.405Z
+2025-06-24T18:47:28: ✅ Conectado a PostgreSQL
+2025-06-24T18:47:28: 📊 Query ejecutada: {
+2025-06-24T18:47:28:   text: '\n' +
+2025-06-24T18:47:28:     '      SELECT user_id, username, email, telefono, imagen_perfil, \n' +
+2025-06-24T18:47:28:     '             provider, provider_id, created_at, updated_at,\n' +
+2025-06-24T18:47:28:     '             premium, premium_expiration, free_coins, paid_coins,\n' +
+2025-06-24T18:47:28:     '             lifetime_session, last_login, is_active\n' +
+2025-06-24T18:47:28:     '      FROM usuarios \n' +
+2025-06-24T18:47:28:     '      WHERE user_id = $1 AND is_active = true\n' +
+2025-06-24T18:47:28:     '    ',
+2025-06-24T18:47:28:   duration: '26ms',
+2025-06-24T18:47:28:   rows: 1
+2025-06-24T18:47:28: }
+2025-06-24T18:47:28: ✅ Conectado a PostgreSQL
+2025-06-24T18:51:13: 📨 GET /api/auth/verify - 2025-06-24T22:51:13.973Z
+2025-06-24T18:51:14: ✅ Conectado a PostgreSQL
+2025-06-24T18:51:14: 📊 Query ejecutada: {
+2025-06-24T18:51:14:   text: '\n' +
+2025-06-24T18:51:14:     '      SELECT user_id, username, email, telefono, imagen_perfil, \n' +
+2025-06-24T18:51:14:     '             provider, provider_id, created_at, updated_at,\n' +
+2025-06-24T18:51:14:     '             premium, premium_expiration, free_coins, paid_coins,\n' +
+2025-06-24T18:51:14:     '             lifetime_session, last_login, is_active\n' +
+2025-06-24T18:51:14:     '      FROM usuarios \n' +
+2025-06-24T18:51:14:     '      WHERE user_id = $1 AND is_active = true\n' +
+2025-06-24T18:51:14:     '    ',
+2025-06-24T18:51:14:   duration: '131ms',
+2025-06-24T18:51:14:   rows: 1
+2025-06-24T18:51:14: }
+2025-06-24T18:51:18: 📨 POST /api/auth/login - 2025-06-24T22:51:18.090Z
+2025-06-24T18:51:18: 📊 Query ejecutada: {
+2025-06-24T18:51:18:   text: '\n' +
+2025-06-24T18:51:18:     '      SELECT * FROM usuarios \n' +
+2025-06-24T18:51:18:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-24T18:51:18:     '      AND is_active = true\n' +
+2025-06-24T18:51:18:     '    ',
+2025-06-24T18:51:18:   duration: '1ms',
+2025-06-24T18:51:18:   rows: 1
+2025-06-24T18:51:18: }
+2025-06-24T18:51:18: 📊 Query ejecutada: {
+2025-06-24T18:51:18:   text: '\n' +
+2025-06-24T18:51:18:     '      UPDATE usuarios \n' +
+2025-06-24T18:51:18:     '      SET last_login = CURRENT_TIMESTAMP \n' +
+2025-06-24T18:51:18:     '      WHERE user_id = $1\n' +
+2025-06-24T18:51:18:     '      RETURNING last_login\n' +
+2025-06-24T18:51:18:     '    ',
+2025-06-24T18:51:18:   duration: '2ms',
+2025-06-24T18:51:18:   rows: 1
+2025-06-24T18:51:18: }
+2025-06-24T18:51:18: 📊 Query ejecutada: {
+2025-06-24T18:51:18:   text: '\n' +
+2025-06-24T18:51:18:     '      INSERT INTO refresh_tokens (token, user_id, expires_at, user_agent, ip_address)\n' +
+2025-06-24T18:51:18:     '      VALUES ($1, $2, $3, $4, $5)\n' +
+2025-06-24T18:51:18:     '      RETURNING token_id, token, user_id, issued_at, expires_at\n' +
+2025-06-24T18:51:18:     '    ',
+2025-06-24T18:51:18:   duration: '1ms',
+2025-06-24T18:51:18:   rows: 1
+2025-06-24T18:51:18: }
+2025-06-24T18:52:21: 📨 POST /api/auth/logout - 2025-06-24T22:52:21.702Z
+2025-06-24T18:52:21: ✅ Conectado a PostgreSQL
+2025-06-24T18:52:21: 📊 Query ejecutada: {
+2025-06-24T18:52:21:   text: '\n' +
+2025-06-24T18:52:21:     '      UPDATE refresh_tokens \n' +
+2025-06-24T18:52:21:     '      SET is_revoked = true \n' +
+2025-06-24T18:52:21:     '      WHERE token = $1\n' +
+2025-06-24T18:52:21:     '      RETURNING token_id\n' +
+2025-06-24T18:52:21:     '    ',
+2025-06-24T18:52:21:   duration: '27ms',
+2025-06-24T18:52:21:   rows: 1
+2025-06-24T18:52:21: }
+2025-06-24T18:52:28: 📨 POST /api/auth/login - 2025-06-24T22:52:28.015Z
+2025-06-24T18:52:28: 📊 Query ejecutada: {
+2025-06-24T18:52:28:   text: '\n' +
+2025-06-24T18:52:28:     '      SELECT * FROM usuarios \n' +
+2025-06-24T18:52:28:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-24T18:52:28:     '      AND is_active = true\n' +
+2025-06-24T18:52:28:     '    ',
+2025-06-24T18:52:28:   duration: '3ms',
+2025-06-24T18:52:28:   rows: 1
+2025-06-24T18:52:28: }
+2025-06-24T18:52:28: 📊 Query ejecutada: {
+2025-06-24T18:52:28:   text: '\n' +
+2025-06-24T18:52:28:     '      UPDATE usuarios \n' +
+2025-06-24T18:52:28:     '      SET last_login = CURRENT_TIMESTAMP \n' +
+2025-06-24T18:52:28:     '      WHERE user_id = $1\n' +
+2025-06-24T18:52:28:     '      RETURNING last_login\n' +
+2025-06-24T18:52:28:     '    ',
+2025-06-24T18:52:28:   duration: '1ms',
+2025-06-24T18:52:28:   rows: 1
+2025-06-24T18:52:28: }
+2025-06-24T18:52:28: 📊 Query ejecutada: {
+2025-06-24T18:52:28:   text: '\n' +
+2025-06-24T18:52:28:     '      INSERT INTO refresh_tokens (token, user_id, expires_at, user_agent, ip_address)\n' +
+2025-06-24T18:52:28:     '      VALUES ($1, $2, $3, $4, $5)\n' +
+2025-06-24T18:52:28:     '      RETURNING token_id, token, user_id, issued_at, expires_at\n' +
+2025-06-24T18:52:28:     '    ',
+2025-06-24T18:52:28:   duration: '1ms',
+2025-06-24T18:52:28:   rows: 1
+2025-06-24T18:52:28: }
+2025-06-24T18:52:36: 📨 POST /api/auth/logout - 2025-06-24T22:52:36.215Z
+2025-06-24T18:52:36: 📊 Query ejecutada: {
+2025-06-24T18:52:36:   text: '\n' +
+2025-06-24T18:52:36:     '      UPDATE refresh_tokens \n' +
+2025-06-24T18:52:36:     '      SET is_revoked = true \n' +
+2025-06-24T18:52:36:     '      WHERE token = $1\n' +
+2025-06-24T18:52:36:     '      RETURNING token_id\n' +
+2025-06-24T18:52:36:     '    ',
+2025-06-24T18:52:36:   duration: '1ms',
+2025-06-24T18:52:36:   rows: 1
+2025-06-24T18:52:36: }
+2025-06-24T18:52:51: 📨 POST /api/auth/login - 2025-06-24T22:52:51.440Z
+2025-06-24T18:52:51: 📊 Query ejecutada: {
+2025-06-24T18:52:51:   text: '\n' +
+2025-06-24T18:52:51:     '      SELECT * FROM usuarios \n' +
+2025-06-24T18:52:51:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-24T18:52:51:     '      AND is_active = true\n' +
+2025-06-24T18:52:51:     '    ',
+2025-06-24T18:52:51:   duration: '1ms',
+2025-06-24T18:52:51:   rows: 0
+2025-06-24T18:52:51: }
+2025-06-24T18:52:53: 📨 POST /api/auth/login - 2025-06-24T22:52:53.739Z
+2025-06-24T18:52:53: 📊 Query ejecutada: {
+2025-06-24T18:52:53:   text: '\n' +
+2025-06-24T18:52:53:     '      SELECT * FROM usuarios \n' +
+2025-06-24T18:52:53:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-24T18:52:53:     '      AND is_active = true\n' +
+2025-06-24T18:52:53:     '    ',
+2025-06-24T18:52:53:   duration: '1ms',
+2025-06-24T18:52:53:   rows: 0
+2025-06-24T18:52:53: }
+2025-06-24T18:52:59: 📨 POST /api/auth/login - 2025-06-24T22:52:59.558Z
+2025-06-24T18:52:59: 📊 Query ejecutada: {
+2025-06-24T18:52:59:   text: '\n' +
+2025-06-24T18:52:59:     '      SELECT * FROM usuarios \n' +
+2025-06-24T18:52:59:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-24T18:52:59:     '      AND is_active = true\n' +
+2025-06-24T18:52:59:     '    ',
+2025-06-24T18:52:59:   duration: '0ms',
+2025-06-24T18:52:59:   rows: 0
+2025-06-24T18:52:59: }
+2025-06-24T18:53:01: 📨 POST /api/auth/login - 2025-06-24T22:53:01.541Z
+2025-06-24T18:53:01: 📊 Query ejecutada: {
+2025-06-24T18:53:01:   text: '\n' +
+2025-06-24T18:53:01:     '      SELECT * FROM usuarios \n' +
+2025-06-24T18:53:01:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-24T18:53:01:     '      AND is_active = true\n' +
+2025-06-24T18:53:01:     '    ',
+2025-06-24T18:53:01:   duration: '1ms',
+2025-06-24T18:53:01:   rows: 0
+2025-06-24T18:53:01: }
+2025-06-24T18:53:04: 📨 POST /api/auth/login - 2025-06-24T22:53:04.710Z
+2025-06-24T18:53:04: 📊 Query ejecutada: {
+2025-06-24T18:53:04:   text: '\n' +
+2025-06-24T18:53:04:     '      SELECT * FROM usuarios \n' +
+2025-06-24T18:53:04:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-24T18:53:04:     '      AND is_active = true\n' +
+2025-06-24T18:53:04:     '    ',
+2025-06-24T18:53:04:   duration: '1ms',
+2025-06-24T18:53:04:   rows: 1
+2025-06-24T18:53:04: }
+2025-06-24T18:53:04: 📊 Query ejecutada: {
+2025-06-24T18:53:04:   text: '\n' +
+2025-06-24T18:53:04:     '      UPDATE usuarios \n' +
+2025-06-24T18:53:04:     '      SET last_login = CURRENT_TIMESTAMP \n' +
+2025-06-24T18:53:04:     '      WHERE user_id = $1\n' +
+2025-06-24T18:53:04:     '      RETURNING last_login\n' +
+2025-06-24T18:53:04:     '    ',
+2025-06-24T18:53:04:   duration: '1ms',
+2025-06-24T18:53:04:   rows: 1
+2025-06-24T18:53:04: }
+2025-06-24T18:53:04: 📊 Query ejecutada: {
+2025-06-24T18:53:04:   text: '\n' +
+2025-06-24T18:53:04:     '      INSERT INTO refresh_tokens (token, user_id, expires_at, user_agent, ip_address)\n' +
+2025-06-24T18:53:04:     '      VALUES ($1, $2, $3, $4, $5)\n' +
+2025-06-24T18:53:04:     '      RETURNING token_id, token, user_id, issued_at, expires_at\n' +
+2025-06-24T18:53:04:     '    ',
+2025-06-24T18:53:04:   duration: '0ms',
+2025-06-24T18:53:04:   rows: 1
+2025-06-24T18:53:04: }
+2025-06-24T18:58:11: 📨 POST /api/transactions/pomodoro - 2025-06-24T22:58:11.407Z
+2025-06-24T18:58:11: ✅ Conectado a PostgreSQL
+2025-06-24T18:58:11: 📊 Query ejecutada: {
+2025-06-24T18:58:11:   text: '\n' +
+2025-06-24T18:58:11:     '      SELECT user_id, username, email, telefono, imagen_perfil, \n' +
+2025-06-24T18:58:11:     '             provider, provider_id, created_at, updated_at,\n' +
+2025-06-24T18:58:11:     '             premium, premium_expiration, free_coins, paid_coins,\n' +
+2025-06-24T18:58:11:     '             lifetime_session, last_login, is_active\n' +
+2025-06-24T18:58:11:     '      FROM usuarios \n' +
+2025-06-24T18:58:11:     '      WHERE user_id = $1 AND is_active = true\n' +
+2025-06-24T18:58:11:     '    ',
+2025-06-24T18:58:11:   duration: '28ms',
+2025-06-24T18:58:11:   rows: 1
+2025-06-24T18:58:11: }
+2025-06-24T18:58:11: ✅ Conectado a PostgreSQL
+2025-06-24T19:07:03: 📨 POST /api/transactions/pomodoro - 2025-06-24T23:07:03.687Z
+2025-06-24T19:07:03: ✅ Conectado a PostgreSQL
+2025-06-24T19:07:03: 📊 Query ejecutada: {
+2025-06-24T19:07:03:   text: '\n' +
+2025-06-24T19:07:03:     '      SELECT user_id, username, email, telefono, imagen_perfil, \n' +
+2025-06-24T19:07:03:     '             provider, provider_id, created_at, updated_at,\n' +
+2025-06-24T19:07:03:     '             premium, premium_expiration, free_coins, paid_coins,\n' +
+2025-06-24T19:07:03:     '             lifetime_session, last_login, is_active\n' +
+2025-06-24T19:07:03:     '      FROM usuarios \n' +
+2025-06-24T19:07:03:     '      WHERE user_id = $1 AND is_active = true\n' +
+2025-06-24T19:07:03:     '    ',
+2025-06-24T19:07:03:   duration: '27ms',
+2025-06-24T19:07:03:   rows: 1
+2025-06-24T19:07:03: }
+2025-06-24T19:07:03: ✅ Conectado a PostgreSQL
+2025-06-24T19:29:24: 📨 POST /api/transactions/pomodoro - 2025-06-24T23:29:24.689Z
+2025-06-24T19:29:24: ✅ Conectado a PostgreSQL
+2025-06-24T19:29:24: 📊 Query ejecutada: {
+2025-06-24T19:29:24:   text: '\n' +
+2025-06-24T19:29:24:     '      SELECT user_id, username, email, telefono, imagen_perfil, \n' +
+2025-06-24T19:29:24:     '             provider, provider_id, created_at, updated_at,\n' +
+2025-06-24T19:29:24:     '             premium, premium_expiration, free_coins, paid_coins,\n' +
+2025-06-24T19:29:24:     '             lifetime_session, last_login, is_active\n' +
+2025-06-24T19:29:24:     '      FROM usuarios \n' +
+2025-06-24T19:29:24:     '      WHERE user_id = $1 AND is_active = true\n' +
+2025-06-24T19:29:24:     '    ',
+2025-06-24T19:29:24:   duration: '28ms',
+2025-06-24T19:29:24:   rows: 1
+2025-06-24T19:29:24: }
+2025-06-24T19:29:24: ✅ Conectado a PostgreSQL
+2025-06-24T19:55:26: 📨 GET /api/auth/verify - 2025-06-24T23:55:26.123Z
+2025-06-24T19:55:26: 📨 POST /api/auth/refresh - 2025-06-24T23:55:26.723Z
+2025-06-24T19:55:26: ✅ Conectado a PostgreSQL
+2025-06-24T19:55:26: 📊 Query ejecutada: {
+2025-06-24T19:55:26:   text: '\n' +
+2025-06-24T19:55:26:     '      SELECT rt.*, u.username, u.email, u.is_active\n' +
+2025-06-24T19:55:26:     '      FROM refresh_tokens rt\n' +
+2025-06-24T19:55:26:     '      JOIN usuarios u ON rt.user_id = u.user_id\n' +
+2025-06-24T19:55:26:     '      WHERE rt.token = $1 \n' +
+2025-06-24T19:55:26:     '        AND rt.is_revoked = false \n' +
+2025-06-24T19:55:26:     '        AND rt.expires_at > CURRENT_TIMESTAMP\n' +
+2025-06-24T19:55:26:     '        AND u.is_active = true\n' +
+2025-06-24T19:55:26:     '    ',
+2025-06-24T19:55:26:   duration: '37ms',
+2025-06-24T19:55:26:   rows: 1
+2025-06-24T19:55:26: }
+2025-06-24T19:55:27: 📨 GET /api/auth/verify - 2025-06-24T23:55:27.213Z
+2025-06-24T19:55:27: 📊 Query ejecutada: {
+2025-06-24T19:55:27:   text: '\n' +
+2025-06-24T19:55:27:     '      SELECT user_id, username, email, telefono, imagen_perfil, \n' +
+2025-06-24T19:55:27:     '             provider, provider_id, created_at, updated_at,\n' +
+2025-06-24T19:55:27:     '             premium, premium_expiration, free_coins, paid_coins,\n' +
+2025-06-24T19:55:27:     '             lifetime_session, last_login, is_active\n' +
+2025-06-24T19:55:27:     '      FROM usuarios \n' +
+2025-06-24T19:55:27:     '      WHERE user_id = $1 AND is_active = true\n' +
+2025-06-24T19:55:27:     '    ',
+2025-06-24T19:55:27:   duration: '1ms',
+2025-06-24T19:55:27:   rows: 1
+2025-06-24T19:55:27: }
+2025-06-24T20:09:37: 📨 POST /api/transactions/pomodoro - 2025-06-25T00:09:37.794Z
+2025-06-24T20:09:37: ✅ Conectado a PostgreSQL
+2025-06-24T20:09:37: 📊 Query ejecutada: {
+2025-06-24T20:09:37:   text: '\n' +
+2025-06-24T20:09:37:     '      SELECT user_id, username, email, telefono, imagen_perfil, \n' +
+2025-06-24T20:09:37:     '             provider, provider_id, created_at, updated_at,\n' +
+2025-06-24T20:09:37:     '             premium, premium_expiration, free_coins, paid_coins,\n' +
+2025-06-24T20:09:37:     '             lifetime_session, last_login, is_active\n' +
+2025-06-24T20:09:37:     '      FROM usuarios \n' +
+2025-06-24T20:09:37:     '      WHERE user_id = $1 AND is_active = true\n' +
+2025-06-24T20:09:37:     '    ',
+2025-06-24T20:09:37:   duration: '26ms',
+2025-06-24T20:09:37:   rows: 1
+2025-06-24T20:09:37: }
+2025-06-24T20:09:37: ✅ Conectado a PostgreSQL
+2025-06-24T20:09:42: 📨 GET /api/auth/verify - 2025-06-25T00:09:42.071Z
+2025-06-24T20:09:42: 📊 Query ejecutada: {
+2025-06-24T20:09:42:   text: '\n' +
+2025-06-24T20:09:42:     '      SELECT user_id, username, email, telefono, imagen_perfil, \n' +
+2025-06-24T20:09:42:     '             provider, provider_id, created_at, updated_at,\n' +
+2025-06-24T20:09:42:     '             premium, premium_expiration, free_coins, paid_coins,\n' +
+2025-06-24T20:09:42:     '             lifetime_session, last_login, is_active\n' +
+2025-06-24T20:09:42:     '      FROM usuarios \n' +
+2025-06-24T20:09:42:     '      WHERE user_id = $1 AND is_active = true\n' +
+2025-06-24T20:09:42:     '    ',
+2025-06-24T20:09:42:   duration: '1ms',
+2025-06-24T20:09:42:   rows: 1
+2025-06-24T20:09:42: }
+2025-06-24T20:10:53: 📨 POST /api/auth/logout - 2025-06-25T00:10:53.241Z
+2025-06-24T20:10:53: ✅ Conectado a PostgreSQL
+2025-06-24T20:10:53: 📊 Query ejecutada: {
+2025-06-24T20:10:53:   text: '\n' +
+2025-06-24T20:10:53:     '      UPDATE refresh_tokens \n' +
+2025-06-24T20:10:53:     '      SET is_revoked = true \n' +
+2025-06-24T20:10:53:     '      WHERE token = $1\n' +
+2025-06-24T20:10:53:     '      RETURNING token_id\n' +
+2025-06-24T20:10:53:     '    ',
+2025-06-24T20:10:53:   duration: '27ms',
+2025-06-24T20:10:53:   rows: 1
+2025-06-24T20:10:53: }
+2025-06-24T20:21:38: 📨 POST /api/auth/register - 2025-06-25T00:21:38.508Z
+2025-06-24T20:21:38: ✅ Conectado a PostgreSQL
+2025-06-24T20:21:38: 📊 Query ejecutada: {
+2025-06-24T20:21:38:   text: 'SELECT 1 FROM usuarios WHERE LOWER(email) = LOWER($1)',
+2025-06-24T20:21:38:   duration: '26ms',
+2025-06-24T20:21:38:   rows: 0
+2025-06-24T20:21:38: }
+2025-06-24T20:21:38: 📊 Query ejecutada: {
+2025-06-24T20:21:38:   text: 'SELECT 1 FROM usuarios WHERE LOWER(username) = LOWER($1)',
+2025-06-24T20:21:38:   duration: '0ms',
+2025-06-24T20:21:38:   rows: 0
+2025-06-24T20:21:38: }
+2025-06-24T20:21:38: 📊 Query ejecutada: {
+2025-06-24T20:21:38:   text: '\n' +
+2025-06-24T20:21:38:     '      INSERT INTO usuarios (\n' +
+2025-06-24T20:21:38:     '        username, email, password_hash, telefono, imagen_perfil,\n' +
+2025-06-24T20:21:38:     '        provider, provider_id\n' +
+2025-06-24T20:21:38:     '      ) VALUES ($1, $2, $3, $4, $5, $6, $7)\n' +
+2025-06-24T20:21:38:     '      RETURNING user_id, username, email, telefono, imagen_perfil,\n' +
+2025-06-24T20:21:38:     '                provider, created_at, premium, free_coins, paid_coins\n' +
+2025-06-24T20:21:38:     '    ',
+2025-06-24T20:21:38:   duration: '2ms',
+2025-06-24T20:21:38:   rows: 1
+2025-06-24T20:21:38: }
+2025-06-24T20:21:38: 📊 Query ejecutada: {
+2025-06-24T20:21:38:   text: 'INSERT INTO transactions \n' +
+2025-06-24T20:21:38:     '         (user_id, transaction_type, coin_type, amount_free_coins, description)\n' +
+2025-06-24T20:21:38:     "         VALUES ($1, 'earn_free_coins', 'free', $2, 'Bonus de bienvenida por registro')",
+2025-06-24T20:21:38:   duration: '1ms',
+2025-06-24T20:21:38:   rows: 1
+2025-06-24T20:21:38: }
+2025-06-24T20:21:38: 📊 Query ejecutada: {
+2025-06-24T20:21:38:   text: 'UPDATE usuarios SET free_coins = $1, paid_coins = $2 WHERE user_id = $3 RETURNING free_coins, paid_coins',
+2025-06-24T20:21:38:   duration: '0ms',
+2025-06-24T20:21:38:   rows: 1
+2025-06-24T20:21:38: }
+2025-06-24T20:21:51: 📨 POST /api/auth/login - 2025-06-25T00:21:51.774Z
+2025-06-24T20:21:51: 📊 Query ejecutada: {
+2025-06-24T20:21:51:   text: '\n' +
+2025-06-24T20:21:51:     '      SELECT * FROM usuarios \n' +
+2025-06-24T20:21:51:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-24T20:21:51:     '      AND is_active = true\n' +
+2025-06-24T20:21:51:     '    ',
+2025-06-24T20:21:51:   duration: '1ms',
+2025-06-24T20:21:51:   rows: 1
+2025-06-24T20:21:51: }
+2025-06-24T20:21:51: 📊 Query ejecutada: {
+2025-06-24T20:21:51:   text: '\n' +
+2025-06-24T20:21:51:     '      UPDATE usuarios \n' +
+2025-06-24T20:21:51:     '      SET last_login = CURRENT_TIMESTAMP \n' +
+2025-06-24T20:21:51:     '      WHERE user_id = $1\n' +
+2025-06-24T20:21:51:     '      RETURNING last_login\n' +
+2025-06-24T20:21:51:     '    ',
+2025-06-24T20:21:51:   duration: '1ms',
+2025-06-24T20:21:51:   rows: 1
+2025-06-24T20:21:51: }
+2025-06-24T20:21:51: 📊 Query ejecutada: {
+2025-06-24T20:21:51:   text: '\n' +
+2025-06-24T20:21:51:     '      INSERT INTO refresh_tokens (token, user_id, expires_at, user_agent, ip_address)\n' +
+2025-06-24T20:21:51:     '      VALUES ($1, $2, $3, $4, $5)\n' +
+2025-06-24T20:21:51:     '      RETURNING token_id, token, user_id, issued_at, expires_at\n' +
+2025-06-24T20:21:51:     '    ',
+2025-06-24T20:21:51:   duration: '2ms',
+2025-06-24T20:21:51:   rows: 1
+2025-06-24T20:21:51: }
+2025-06-24T20:36:46: 📨 POST /api/auth/login - 2025-06-25T00:36:46.036Z
+2025-06-24T20:36:46: ✅ Conectado a PostgreSQL
+2025-06-24T20:36:46: 📊 Query ejecutada: {
+2025-06-24T20:36:46:   text: '\n' +
+2025-06-24T20:36:46:     '      SELECT * FROM usuarios \n' +
+2025-06-24T20:36:46:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-24T20:36:46:     '      AND is_active = true\n' +
+2025-06-24T20:36:46:     '    ',
+2025-06-24T20:36:46:   duration: '26ms',
+2025-06-24T20:36:46:   rows: 1
+2025-06-24T20:36:46: }
+2025-06-24T20:36:46: 📊 Query ejecutada: {
+2025-06-24T20:36:46:   text: '\n' +
+2025-06-24T20:36:46:     '      UPDATE usuarios \n' +
+2025-06-24T20:36:46:     '      SET last_login = CURRENT_TIMESTAMP \n' +
+2025-06-24T20:36:46:     '      WHERE user_id = $1\n' +
+2025-06-24T20:36:46:     '      RETURNING last_login\n' +
+2025-06-24T20:36:46:     '    ',
+2025-06-24T20:36:46:   duration: '1ms',
+2025-06-24T20:36:46:   rows: 1
+2025-06-24T20:36:46: }
+2025-06-24T20:36:46: 📊 Query ejecutada: {
+2025-06-24T20:36:46:   text: '\n' +
+2025-06-24T20:36:46:     '      INSERT INTO refresh_tokens (token, user_id, expires_at, user_agent, ip_address)\n' +
+2025-06-24T20:36:46:     '      VALUES ($1, $2, $3, $4, $5)\n' +
+2025-06-24T20:36:46:     '      RETURNING token_id, token, user_id, issued_at, expires_at\n' +
+2025-06-24T20:36:46:     '    ',
+2025-06-24T20:36:46:   duration: '2ms',
+2025-06-24T20:36:46:   rows: 1
+2025-06-24T20:36:46: }
+2025-06-24T20:36:58: 📨 GET /api/auth/verify - 2025-06-25T00:36:58.525Z
+2025-06-24T20:36:58: 📊 Query ejecutada: {
+2025-06-24T20:36:58:   text: '\n' +
+2025-06-24T20:36:58:     '      SELECT user_id, username, email, telefono, imagen_perfil, \n' +
+2025-06-24T20:36:58:     '             provider, provider_id, created_at, updated_at,\n' +
+2025-06-24T20:36:58:     '             premium, premium_expiration, free_coins, paid_coins,\n' +
+2025-06-24T20:36:58:     '             lifetime_session, last_login, is_active\n' +
+2025-06-24T20:36:58:     '      FROM usuarios \n' +
+2025-06-24T20:36:58:     '      WHERE user_id = $1 AND is_active = true\n' +
+2025-06-24T20:36:58:     '    ',
+2025-06-24T20:36:58:   duration: '0ms',
+2025-06-24T20:36:58:   rows: 1
+2025-06-24T20:36:58: }
+2025-06-24T20:39:44: 📨 GET /api/auth/verify - 2025-06-25T00:39:44.901Z
+2025-06-24T20:39:44: ✅ Conectado a PostgreSQL
+2025-06-24T20:39:44: 📊 Query ejecutada: {
+2025-06-24T20:39:44:   text: '\n' +
+2025-06-24T20:39:44:     '      SELECT user_id, username, email, telefono, imagen_perfil, \n' +
+2025-06-24T20:39:44:     '             provider, provider_id, created_at, updated_at,\n' +
+2025-06-24T20:39:44:     '             premium, premium_expiration, free_coins, paid_coins,\n' +
+2025-06-24T20:39:44:     '             lifetime_session, last_login, is_active\n' +
+2025-06-24T20:39:44:     '      FROM usuarios \n' +
+2025-06-24T20:39:44:     '      WHERE user_id = $1 AND is_active = true\n' +
+2025-06-24T20:39:44:     '    ',
+2025-06-24T20:39:44:   duration: '25ms',
+2025-06-24T20:39:44:   rows: 1
+2025-06-24T20:39:44: }
+2025-06-24T20:39:51: 📨 POST /api/auth/logout - 2025-06-25T00:39:51.162Z
+2025-06-24T20:39:51: 📊 Query ejecutada: {
+2025-06-24T20:39:51:   text: '\n' +
+2025-06-24T20:39:51:     '      UPDATE refresh_tokens \n' +
+2025-06-24T20:39:51:     '      SET is_revoked = true \n' +
+2025-06-24T20:39:51:     '      WHERE token = $1\n' +
+2025-06-24T20:39:51:     '      RETURNING token_id\n' +
+2025-06-24T20:39:51:     '    ',
+2025-06-24T20:39:51:   duration: '3ms',
+2025-06-24T20:39:51:   rows: 1
+2025-06-24T20:39:51: }
+2025-06-24T20:48:34: 📨 POST /api/auth/login - 2025-06-25T00:48:34.299Z
+2025-06-24T20:48:34: ✅ Conectado a PostgreSQL
+2025-06-24T20:48:34: 📊 Query ejecutada: {
+2025-06-24T20:48:34:   text: '\n' +
+2025-06-24T20:48:34:     '      SELECT * FROM usuarios \n' +
+2025-06-24T20:48:34:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-24T20:48:34:     '      AND is_active = true\n' +
+2025-06-24T20:48:34:     '    ',
+2025-06-24T20:48:34:   duration: '28ms',
+2025-06-24T20:48:34:   rows: 1
+2025-06-24T20:48:34: }
+2025-06-24T20:48:34: 📊 Query ejecutada: {
+2025-06-24T20:48:34:   text: '\n' +
+2025-06-24T20:48:34:     '      UPDATE usuarios \n' +
+2025-06-24T20:48:34:     '      SET last_login = CURRENT_TIMESTAMP \n' +
+2025-06-24T20:48:34:     '      WHERE user_id = $1\n' +
+2025-06-24T20:48:34:     '      RETURNING last_login\n' +
+2025-06-24T20:48:34:     '    ',
+2025-06-24T20:48:34:   duration: '2ms',
+2025-06-24T20:48:34:   rows: 1
+2025-06-24T20:48:34: }
+2025-06-24T20:48:34: 📊 Query ejecutada: {
+2025-06-24T20:48:34:   text: '\n' +
+2025-06-24T20:48:34:     '      INSERT INTO refresh_tokens (token, user_id, expires_at, user_agent, ip_address)\n' +
+2025-06-24T20:48:34:     '      VALUES ($1, $2, $3, $4, $5)\n' +
+2025-06-24T20:48:34:     '      RETURNING token_id, token, user_id, issued_at, expires_at\n' +
+2025-06-24T20:48:34:     '    ',
+2025-06-24T20:48:34:   duration: '1ms',
+2025-06-24T20:48:34:   rows: 1
+2025-06-24T20:48:34: }
+2025-06-24T20:48:53: 📨 POST /api/auth/logout - 2025-06-25T00:48:53.768Z
+2025-06-24T20:48:53: 📊 Query ejecutada: {
+2025-06-24T20:48:53:   text: '\n' +
+2025-06-24T20:48:53:     '      UPDATE refresh_tokens \n' +
+2025-06-24T20:48:53:     '      SET is_revoked = true \n' +
+2025-06-24T20:48:53:     '      WHERE token = $1\n' +
+2025-06-24T20:48:53:     '      RETURNING token_id\n' +
+2025-06-24T20:48:53:     '    ',
+2025-06-24T20:48:53:   duration: '4ms',
+2025-06-24T20:48:53:   rows: 1
+2025-06-24T20:48:53: }
+2025-06-24T22:03:40: 📨 POST /api/auth/register - 2025-06-25T02:03:40.062Z
+2025-06-24T22:03:40: ✅ Conectado a PostgreSQL
+2025-06-24T22:03:40: 📊 Query ejecutada: {
+2025-06-24T22:03:40:   text: 'SELECT 1 FROM usuarios WHERE LOWER(email) = LOWER($1)',
+2025-06-24T22:03:40:   duration: '28ms',
+2025-06-24T22:03:40:   rows: 0
+2025-06-24T22:03:40: }
+2025-06-24T22:03:40: 📊 Query ejecutada: {
+2025-06-24T22:03:40:   text: 'SELECT 1 FROM usuarios WHERE LOWER(username) = LOWER($1)',
+2025-06-24T22:03:40:   duration: '0ms',
+2025-06-24T22:03:40:   rows: 0
+2025-06-24T22:03:40: }
+2025-06-24T22:03:40: 📊 Query ejecutada: {
+2025-06-24T22:03:40:   text: '\n' +
+2025-06-24T22:03:40:     '      INSERT INTO usuarios (\n' +
+2025-06-24T22:03:40:     '        username, email, password_hash, telefono, imagen_perfil,\n' +
+2025-06-24T22:03:40:     '        provider, provider_id\n' +
+2025-06-24T22:03:40:     '      ) VALUES ($1, $2, $3, $4, $5, $6, $7)\n' +
+2025-06-24T22:03:40:     '      RETURNING user_id, username, email, telefono, imagen_perfil,\n' +
+2025-06-24T22:03:40:     '                provider, created_at, premium, free_coins, paid_coins\n' +
+2025-06-24T22:03:40:     '    ',
+2025-06-24T22:03:40:   duration: '1ms',
+2025-06-24T22:03:40:   rows: 1
+2025-06-24T22:03:40: }
+2025-06-24T22:03:40: 📊 Query ejecutada: {
+2025-06-24T22:03:40:   text: 'INSERT INTO transactions \n' +
+2025-06-24T22:03:40:     '         (user_id, transaction_type, coin_type, amount_free_coins, description)\n' +
+2025-06-24T22:03:40:     "         VALUES ($1, 'earn_free_coins', 'free', $2, 'Bonus de bienvenida por registro')",
+2025-06-24T22:03:40:   duration: '1ms',
+2025-06-24T22:03:40:   rows: 1
+2025-06-24T22:03:40: }
+2025-06-24T22:03:40: 📊 Query ejecutada: {
+2025-06-24T22:03:40:   text: 'UPDATE usuarios SET free_coins = $1, paid_coins = $2 WHERE user_id = $3 RETURNING free_coins, paid_coins',
+2025-06-24T22:03:40:   duration: '1ms',
+2025-06-24T22:03:40:   rows: 1
+2025-06-24T22:03:40: }
+2025-06-24T22:03:51: 📨 POST /api/auth/login - 2025-06-25T02:03:51.380Z
+2025-06-24T22:03:51: 📊 Query ejecutada: {
+2025-06-24T22:03:51:   text: '\n' +
+2025-06-24T22:03:51:     '      SELECT * FROM usuarios \n' +
+2025-06-24T22:03:51:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-24T22:03:51:     '      AND is_active = true\n' +
+2025-06-24T22:03:51:     '    ',
+2025-06-24T22:03:51:   duration: '1ms',
+2025-06-24T22:03:51:   rows: 1
+2025-06-24T22:03:51: }
+2025-06-24T22:03:51: 📊 Query ejecutada: {
+2025-06-24T22:03:51:   text: '\n' +
+2025-06-24T22:03:51:     '      UPDATE usuarios \n' +
+2025-06-24T22:03:51:     '      SET last_login = CURRENT_TIMESTAMP \n' +
+2025-06-24T22:03:51:     '      WHERE user_id = $1\n' +
+2025-06-24T22:03:51:     '      RETURNING last_login\n' +
+2025-06-24T22:03:51:     '    ',
+2025-06-24T22:03:51:   duration: '0ms',
+2025-06-24T22:03:51:   rows: 1
+2025-06-24T22:03:51: }
+2025-06-24T22:03:51: 📊 Query ejecutada: {
+2025-06-24T22:03:51:   text: '\n' +
+2025-06-24T22:03:51:     '      INSERT INTO refresh_tokens (token, user_id, expires_at, user_agent, ip_address)\n' +
+2025-06-24T22:03:51:     '      VALUES ($1, $2, $3, $4, $5)\n' +
+2025-06-24T22:03:51:     '      RETURNING token_id, token, user_id, issued_at, expires_at\n' +
+2025-06-24T22:03:51:     '    ',
+2025-06-24T22:03:51:   duration: '2ms',
+2025-06-24T22:03:51:   rows: 1
+2025-06-24T22:03:51: }
+2025-06-24T22:04:29: 📨 POST /api/users/12/change-password - 2025-06-25T02:04:29.268Z
+2025-06-24T22:04:29: ✅ Conectado a PostgreSQL
+2025-06-24T22:04:29: 📊 Query ejecutada: {
+2025-06-24T22:04:29:   text: '\n' +
+2025-06-24T22:04:29:     '      SELECT user_id, username, email, telefono, imagen_perfil, \n' +
+2025-06-24T22:04:29:     '             provider, provider_id, created_at, updated_at,\n' +
+2025-06-24T22:04:29:     '             premium, premium_expiration, free_coins, paid_coins,\n' +
+2025-06-24T22:04:29:     '             lifetime_session, last_login, is_active\n' +
+2025-06-24T22:04:29:     '      FROM usuarios \n' +
+2025-06-24T22:04:29:     '      WHERE user_id = $1 AND is_active = true\n' +
+2025-06-24T22:04:29:     '    ',
+2025-06-24T22:04:29:   duration: '26ms',
+2025-06-24T22:04:29:   rows: 1
+2025-06-24T22:04:29: }
+2025-06-24T22:04:29: 📊 Query ejecutada: {
+2025-06-24T22:04:29:   text: 'SELECT user_id, username, email, password_hash, telefono, imagen_perfil FROM usuarios WHERE user_id = $1',
+2025-06-24T22:04:29:   duration: '0ms',
+2025-06-24T22:04:29:   rows: 1
+2025-06-24T22:04:29: }
+2025-06-24T22:04:29: 📊 Query ejecutada: {
+2025-06-24T22:04:29:   text: 'UPDATE usuarios SET password_hash = $1, updated_at = CURRENT_TIMESTAMP WHERE user_id = $2',
+2025-06-24T22:04:29:   duration: '1ms',
+2025-06-24T22:04:29:   rows: 1
+2025-06-24T22:04:29: }
+2025-06-24T22:04:32: 📨 POST /api/auth/logout - 2025-06-25T02:04:32.549Z
+2025-06-24T22:04:32: 📊 Query ejecutada: {
+2025-06-24T22:04:32:   text: '\n' +
+2025-06-24T22:04:32:     '      UPDATE refresh_tokens \n' +
+2025-06-24T22:04:32:     '      SET is_revoked = true \n' +
+2025-06-24T22:04:32:     '      WHERE token = $1\n' +
+2025-06-24T22:04:32:     '      RETURNING token_id\n' +
+2025-06-24T22:04:32:     '    ',
+2025-06-24T22:04:32:   duration: '3ms',
+2025-06-24T22:04:32:   rows: 1
+2025-06-24T22:04:32: }
+2025-06-24T22:04:39: 📨 POST /api/auth/login - 2025-06-25T02:04:39.660Z
+2025-06-24T22:04:39: 📊 Query ejecutada: {
+2025-06-24T22:04:39:   text: '\n' +
+2025-06-24T22:04:39:     '      SELECT * FROM usuarios \n' +
+2025-06-24T22:04:39:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-24T22:04:39:     '      AND is_active = true\n' +
+2025-06-24T22:04:39:     '    ',
+2025-06-24T22:04:39:   duration: '0ms',
+2025-06-24T22:04:39:   rows: 1
+2025-06-24T22:04:39: }
+2025-06-24T22:04:39: 📊 Query ejecutada: {
+2025-06-24T22:04:39:   text: '\n' +
+2025-06-24T22:04:39:     '      UPDATE usuarios \n' +
+2025-06-24T22:04:39:     '      SET last_login = CURRENT_TIMESTAMP \n' +
+2025-06-24T22:04:39:     '      WHERE user_id = $1\n' +
+2025-06-24T22:04:39:     '      RETURNING last_login\n' +
+2025-06-24T22:04:39:     '    ',
+2025-06-24T22:04:39:   duration: '0ms',
+2025-06-24T22:04:39:   rows: 1
+2025-06-24T22:04:39: }
+2025-06-24T22:04:39: 📊 Query ejecutada: {
+2025-06-24T22:04:39:   text: '\n' +
+2025-06-24T22:04:39:     '      INSERT INTO refresh_tokens (token, user_id, expires_at, user_agent, ip_address)\n' +
+2025-06-24T22:04:39:     '      VALUES ($1, $2, $3, $4, $5)\n' +
+2025-06-24T22:04:39:     '      RETURNING token_id, token, user_id, issued_at, expires_at\n' +
+2025-06-24T22:04:39:     '    ',
+2025-06-24T22:04:39:   duration: '1ms',
+2025-06-24T22:04:39:   rows: 1
+2025-06-24T22:04:39: }
+2025-06-24T22:04:44: 📨 POST /api/auth/logout - 2025-06-25T02:04:44.486Z
+2025-06-24T22:04:44: 📊 Query ejecutada: {
+2025-06-24T22:04:44:   text: '\n' +
+2025-06-24T22:04:44:     '      UPDATE refresh_tokens \n' +
+2025-06-24T22:04:44:     '      SET is_revoked = true \n' +
+2025-06-24T22:04:44:     '      WHERE token = $1\n' +
+2025-06-24T22:04:44:     '      RETURNING token_id\n' +
+2025-06-24T22:04:44:     '    ',
+2025-06-24T22:04:44:   duration: '1ms',
+2025-06-24T22:04:44:   rows: 1
+2025-06-24T22:04:44: }
+2025-06-24T22:04:50: 📨 POST /api/auth/login - 2025-06-25T02:04:50.365Z
+2025-06-24T22:04:50: 📊 Query ejecutada: {
+2025-06-24T22:04:50:   text: '\n' +
+2025-06-24T22:04:50:     '      SELECT * FROM usuarios \n' +
+2025-06-24T22:04:50:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-24T22:04:50:     '      AND is_active = true\n' +
+2025-06-24T22:04:50:     '    ',
+2025-06-24T22:04:50:   duration: '1ms',
+2025-06-24T22:04:50:   rows: 1
+2025-06-24T22:04:50: }
+2025-06-24T22:04:50: 📊 Query ejecutada: {
+2025-06-24T22:04:50:   text: '\n' +
+2025-06-24T22:04:50:     '      UPDATE usuarios \n' +
+2025-06-24T22:04:50:     '      SET last_login = CURRENT_TIMESTAMP \n' +
+2025-06-24T22:04:50:     '      WHERE user_id = $1\n' +
+2025-06-24T22:04:50:     '      RETURNING last_login\n' +
+2025-06-24T22:04:50:     '    ',
+2025-06-24T22:04:50:   duration: '2ms',
+2025-06-24T22:04:50:   rows: 1
+2025-06-24T22:04:50: }
+2025-06-24T22:04:50: 📊 Query ejecutada: {
+2025-06-24T22:04:50:   text: '\n' +
+2025-06-24T22:04:50:     '      INSERT INTO refresh_tokens (token, user_id, expires_at, user_agent, ip_address)\n' +
+2025-06-24T22:04:50:     '      VALUES ($1, $2, $3, $4, $5)\n' +
+2025-06-24T22:04:50:     '      RETURNING token_id, token, user_id, issued_at, expires_at\n' +
+2025-06-24T22:04:50:     '    ',
+2025-06-24T22:04:50:   duration: '0ms',
+2025-06-24T22:04:50:   rows: 1
+2025-06-24T22:04:50: }
+2025-06-24T22:04:54: 📨 GET /api/auth/verify - 2025-06-25T02:04:54.846Z
+2025-06-24T22:04:54: 📊 Query ejecutada: {
+2025-06-24T22:04:54:   text: '\n' +
+2025-06-24T22:04:54:     '      SELECT user_id, username, email, telefono, imagen_perfil, \n' +
+2025-06-24T22:04:54:     '             provider, provider_id, created_at, updated_at,\n' +
+2025-06-24T22:04:54:     '             premium, premium_expiration, free_coins, paid_coins,\n' +
+2025-06-24T22:04:54:     '             lifetime_session, last_login, is_active\n' +
+2025-06-24T22:04:54:     '      FROM usuarios \n' +
+2025-06-24T22:04:54:     '      WHERE user_id = $1 AND is_active = true\n' +
+2025-06-24T22:04:54:     '    ',
+2025-06-24T22:04:54:   duration: '0ms',
+2025-06-24T22:04:54:   rows: 1
+2025-06-24T22:04:54: }
+2025-06-24T22:05:59: 📨 POST /api/auth/login - 2025-06-25T02:05:59.180Z
+2025-06-24T22:05:59: ✅ Conectado a PostgreSQL
+2025-06-24T22:05:59: 📊 Query ejecutada: {
+2025-06-24T22:05:59:   text: '\n' +
+2025-06-24T22:05:59:     '      SELECT * FROM usuarios \n' +
+2025-06-24T22:05:59:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-24T22:05:59:     '      AND is_active = true\n' +
+2025-06-24T22:05:59:     '    ',
+2025-06-24T22:05:59:   duration: '26ms',
+2025-06-24T22:05:59:   rows: 0
+2025-06-24T22:05:59: }
+2025-06-24T22:06:24: 📨 POST /api/auth/register - 2025-06-25T02:06:24.880Z
+2025-06-24T22:06:28: 📨 POST /api/transactions/pomodoro - 2025-06-25T02:06:28.921Z
+2025-06-24T22:06:28: 📊 Query ejecutada: {
+2025-06-24T22:06:28:   text: '\n' +
+2025-06-24T22:06:28:     '      SELECT user_id, username, email, telefono, imagen_perfil, \n' +
+2025-06-24T22:06:28:     '             provider, provider_id, created_at, updated_at,\n' +
+2025-06-24T22:06:28:     '             premium, premium_expiration, free_coins, paid_coins,\n' +
+2025-06-24T22:06:28:     '             lifetime_session, last_login, is_active\n' +
+2025-06-24T22:06:28:     '      FROM usuarios \n' +
+2025-06-24T22:06:28:     '      WHERE user_id = $1 AND is_active = true\n' +
+2025-06-24T22:06:28:     '    ',
+2025-06-24T22:06:28:   duration: '1ms',
+2025-06-24T22:06:28:   rows: 1
+2025-06-24T22:06:28: }
+2025-06-24T22:06:28: ✅ Conectado a PostgreSQL
+2025-06-24T22:06:43: 📨 POST /api/auth/register - 2025-06-25T02:06:43.230Z
+2025-06-24T22:06:43: 📊 Query ejecutada: {
+2025-06-24T22:06:43:   text: 'SELECT 1 FROM usuarios WHERE LOWER(email) = LOWER($1)',
+2025-06-24T22:06:43:   duration: '1ms',
+2025-06-24T22:06:43:   rows: 0
+2025-06-24T22:06:43: }
+2025-06-24T22:06:43: 📊 Query ejecutada: {
+2025-06-24T22:06:43:   text: 'SELECT 1 FROM usuarios WHERE LOWER(username) = LOWER($1)',
+2025-06-24T22:06:43:   duration: '0ms',
+2025-06-24T22:06:43:   rows: 0
+2025-06-24T22:06:43: }
+2025-06-24T22:06:43: 📊 Query ejecutada: {
+2025-06-24T22:06:43:   text: '\n' +
+2025-06-24T22:06:43:     '      INSERT INTO usuarios (\n' +
+2025-06-24T22:06:43:     '        username, email, password_hash, telefono, imagen_perfil,\n' +
+2025-06-24T22:06:43:     '        provider, provider_id\n' +
+2025-06-24T22:06:43:     '      ) VALUES ($1, $2, $3, $4, $5, $6, $7)\n' +
+2025-06-24T22:06:43:     '      RETURNING user_id, username, email, telefono, imagen_perfil,\n' +
+2025-06-24T22:06:43:     '                provider, created_at, premium, free_coins, paid_coins\n' +
+2025-06-24T22:06:43:     '    ',
+2025-06-24T22:06:43:   duration: '1ms',
+2025-06-24T22:06:43:   rows: 1
+2025-06-24T22:06:43: }
+2025-06-24T22:06:43: 📊 Query ejecutada: {
+2025-06-24T22:06:43:   text: 'INSERT INTO transactions \n' +
+2025-06-24T22:06:43:     '         (user_id, transaction_type, coin_type, amount_free_coins, description)\n' +
+2025-06-24T22:06:43:     "         VALUES ($1, 'earn_free_coins', 'free', $2, 'Bonus de bienvenida por registro')",
+2025-06-24T22:06:43:   duration: '2ms',
+2025-06-24T22:06:43:   rows: 1
+2025-06-24T22:06:43: }
+2025-06-24T22:06:43: 📊 Query ejecutada: {
+2025-06-24T22:06:43:   text: 'UPDATE usuarios SET free_coins = $1, paid_coins = $2 WHERE user_id = $3 RETURNING free_coins, paid_coins',
+2025-06-24T22:06:43:   duration: '0ms',
+2025-06-24T22:06:43:   rows: 1
+2025-06-24T22:06:43: }
+2025-06-24T22:06:56: 📨 POST /api/auth/login - 2025-06-25T02:06:56.687Z
+2025-06-24T22:06:56: 📊 Query ejecutada: {
+2025-06-24T22:06:56:   text: '\n' +
+2025-06-24T22:06:56:     '      SELECT * FROM usuarios \n' +
+2025-06-24T22:06:56:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-24T22:06:56:     '      AND is_active = true\n' +
+2025-06-24T22:06:56:     '    ',
+2025-06-24T22:06:56:   duration: '1ms',
+2025-06-24T22:06:56:   rows: 1
+2025-06-24T22:06:56: }
+2025-06-24T22:06:56: 📊 Query ejecutada: {
+2025-06-24T22:06:56:   text: '\n' +
+2025-06-24T22:06:56:     '      UPDATE usuarios \n' +
+2025-06-24T22:06:56:     '      SET last_login = CURRENT_TIMESTAMP \n' +
+2025-06-24T22:06:56:     '      WHERE user_id = $1\n' +
+2025-06-24T22:06:56:     '      RETURNING last_login\n' +
+2025-06-24T22:06:56:     '    ',
+2025-06-24T22:06:56:   duration: '1ms',
+2025-06-24T22:06:56:   rows: 1
+2025-06-24T22:06:56: }
+2025-06-24T22:06:56: 📊 Query ejecutada: {
+2025-06-24T22:06:56:   text: '\n' +
+2025-06-24T22:06:56:     '      INSERT INTO refresh_tokens (token, user_id, expires_at, user_agent, ip_address)\n' +
+2025-06-24T22:06:56:     '      VALUES ($1, $2, $3, $4, $5)\n' +
+2025-06-24T22:06:56:     '      RETURNING token_id, token, user_id, issued_at, expires_at\n' +
+2025-06-24T22:06:56:     '    ',
+2025-06-24T22:06:56:   duration: '1ms',
+2025-06-24T22:06:56:   rows: 1
+2025-06-24T22:06:56: }
+2025-06-24T22:08:30: 📨 POST /api/transactions/pomodoro - 2025-06-25T02:08:30.643Z
+2025-06-24T22:08:30: ✅ Conectado a PostgreSQL
+2025-06-24T22:08:30: 📊 Query ejecutada: {
+2025-06-24T22:08:30:   text: '\n' +
+2025-06-24T22:08:30:     '      SELECT user_id, username, email, telefono, imagen_perfil, \n' +
+2025-06-24T22:08:30:     '             provider, provider_id, created_at, updated_at,\n' +
+2025-06-24T22:08:30:     '             premium, premium_expiration, free_coins, paid_coins,\n' +
+2025-06-24T22:08:30:     '             lifetime_session, last_login, is_active\n' +
+2025-06-24T22:08:30:     '      FROM usuarios \n' +
+2025-06-24T22:08:30:     '      WHERE user_id = $1 AND is_active = true\n' +
+2025-06-24T22:08:30:     '    ',
+2025-06-24T22:08:30:   duration: '26ms',
+2025-06-24T22:08:30:   rows: 1
+2025-06-24T22:08:30: }
+2025-06-24T22:08:30: ✅ Conectado a PostgreSQL
+2025-06-24T22:13:14: 📨 POST /api/auth/register - 2025-06-25T02:13:14.160Z
+2025-06-24T22:13:14: ✅ Conectado a PostgreSQL
+2025-06-24T22:13:14: 📊 Query ejecutada: {
+2025-06-24T22:13:14:   text: 'SELECT 1 FROM usuarios WHERE LOWER(email) = LOWER($1)',
+2025-06-24T22:13:14:   duration: '26ms',
+2025-06-24T22:13:14:   rows: 0
+2025-06-24T22:13:14: }
+2025-06-24T22:13:14: 📊 Query ejecutada: {
+2025-06-24T22:13:14:   text: 'SELECT 1 FROM usuarios WHERE LOWER(username) = LOWER($1)',
+2025-06-24T22:13:14:   duration: '0ms',
+2025-06-24T22:13:14:   rows: 0
+2025-06-24T22:13:14: }
+2025-06-24T22:13:14: 📊 Query ejecutada: {
+2025-06-24T22:13:14:   text: '\n' +
+2025-06-24T22:13:14:     '      INSERT INTO usuarios (\n' +
+2025-06-24T22:13:14:     '        username, email, password_hash, telefono, imagen_perfil,\n' +
+2025-06-24T22:13:14:     '        provider, provider_id\n' +
+2025-06-24T22:13:14:     '      ) VALUES ($1, $2, $3, $4, $5, $6, $7)\n' +
+2025-06-24T22:13:14:     '      RETURNING user_id, username, email, telefono, imagen_perfil,\n' +
+2025-06-24T22:13:14:     '                provider, created_at, premium, free_coins, paid_coins\n' +
+2025-06-24T22:13:14:     '    ',
+2025-06-24T22:13:14:   duration: '1ms',
+2025-06-24T22:13:14:   rows: 1
+2025-06-24T22:13:14: }
+2025-06-24T22:13:14: 📊 Query ejecutada: {
+2025-06-24T22:13:14:   text: 'INSERT INTO transactions \n' +
+2025-06-24T22:13:14:     '         (user_id, transaction_type, coin_type, amount_free_coins, description)\n' +
+2025-06-24T22:13:14:     "         VALUES ($1, 'earn_free_coins', 'free', $2, 'Bonus de bienvenida por registro')",
+2025-06-24T22:13:14:   duration: '1ms',
+2025-06-24T22:13:14:   rows: 1
+2025-06-24T22:13:14: }
+2025-06-24T22:13:14: 📊 Query ejecutada: {
+2025-06-24T22:13:14:   text: 'UPDATE usuarios SET free_coins = $1, paid_coins = $2 WHERE user_id = $3 RETURNING free_coins, paid_coins',
+2025-06-24T22:13:14:   duration: '0ms',
+2025-06-24T22:13:14:   rows: 1
+2025-06-24T22:13:14: }
+2025-06-24T22:13:24: 📨 POST /api/auth/login - 2025-06-25T02:13:24.047Z
+2025-06-24T22:13:24: 📊 Query ejecutada: {
+2025-06-24T22:13:24:   text: '\n' +
+2025-06-24T22:13:24:     '      SELECT * FROM usuarios \n' +
+2025-06-24T22:13:24:     '      WHERE (LOWER(username) = LOWER($1) OR LOWER(email) = LOWER($1)) \n' +
+2025-06-24T22:13:24:     '      AND is_active = true\n' +
+2025-06-24T22:13:24:     '    ',
+2025-06-24T22:13:24:   duration: '0ms',
+2025-06-24T22:13:24:   rows: 1
+2025-06-24T22:13:24: }
+2025-06-24T22:13:24: 📊 Query ejecutada: {
+2025-06-24T22:13:24:   text: '\n' +
+2025-06-24T22:13:24:     '      UPDATE usuarios \n' +
+2025-06-24T22:13:24:     '      SET last_login = CURRENT_TIMESTAMP \n' +
+2025-06-24T22:13:24:     '      WHERE user_id = $1\n' +
+2025-06-24T22:13:24:     '      RETURNING last_login\n' +
+2025-06-24T22:13:24:     '    ',
+2025-06-24T22:13:24:   duration: '1ms',
+2025-06-24T22:13:24:   rows: 1
+2025-06-24T22:13:24: }
+2025-06-24T22:13:24: 📊 Query ejecutada: {
+2025-06-24T22:13:24:   text: '\n' +
+2025-06-24T22:13:24:     '      INSERT INTO refresh_tokens (token, user_id, expires_at, user_agent, ip_address)\n' +
+2025-06-24T22:13:24:     '      VALUES ($1, $2, $3, $4, $5)\n' +
+2025-06-24T22:13:24:     '      RETURNING token_id, token, user_id, issued_at, expires_at\n' +
+2025-06-24T22:13:24:     '    ',
+2025-06-24T22:13:24:   duration: '1ms',
+2025-06-24T22:13:24:   rows: 1
+2025-06-24T22:13:24: }
+2025-06-24T22:20:42: 📨 POST /api/auth/logout - 2025-06-25T02:20:42.479Z
+2025-06-24T22:20:42: ✅ Conectado a PostgreSQL
+2025-06-24T22:20:42: 📊 Query ejecutada: {
+2025-06-24T22:20:42:   text: '\n' +
+2025-06-24T22:20:42:     '      UPDATE refresh_tokens \n' +
+2025-06-24T22:20:42:     '      SET is_revoked = true \n' +
+2025-06-24T22:20:42:     '      WHERE token = $1\n' +
+2025-06-24T22:20:42:     '      RETURNING token_id\n' +
+2025-06-24T22:20:42:     '    ',
+2025-06-24T22:20:42:   duration: '29ms',
+2025-06-24T22:20:42:   rows: 1
+2025-06-24T22:20:42: }

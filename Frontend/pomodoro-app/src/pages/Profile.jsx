@@ -80,7 +80,7 @@ const Profile = () => {
   if (!user) return null;
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl w-full">
       <h1 className="text-3xl font-bold text-gray-800 mb-8">Mi Perfil</h1>
 
       {/* Información del usuario */}

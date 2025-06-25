@@ -305,7 +305,7 @@ const PomodoroTimer = () => {
   const strokeDasharray = `${(progress / 100) * circumference} ${circumference}`;
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[600px] p-8">
+    <div className="flex flex-col items-center justify-center min-h-[600px] w-full p-8">
       {/* Indicador de ciclos completados */}
       {cycleCount > 0 && (
         <div className="mb-4 text-sm text-gray-600">
@@ -317,7 +317,7 @@ const PomodoroTimer = () => {
       <div className="flex gap-2 mb-8">
         <button
           onClick={() => changeMode(TIMER_MODES.POMODORO)}
-          className={`px-4 py-2 rounded-lg font-medium transition-all ${
+          className={`px-4 py-2 rounded-md font-medium transition-all ${
             mode === TIMER_MODES.POMODORO
               ? 'bg-red-500 text-white scale-105'
               : 'bg-gray-200 hover:bg-gray-300'
@@ -327,7 +327,7 @@ const PomodoroTimer = () => {
         </button>
         <button
           onClick={() => changeMode(TIMER_MODES.SHORT_BREAK)}
-          className={`px-4 py-2 rounded-lg font-medium transition-all ${
+          className={`px-4 py-2 rounded-md font-medium transition-all ${
             mode === TIMER_MODES.SHORT_BREAK
               ? 'bg-green-500 text-white scale-105'
               : 'bg-gray-200 hover:bg-gray-300'
@@ -337,7 +337,7 @@ const PomodoroTimer = () => {
         </button>
         <button
           onClick={() => changeMode(TIMER_MODES.LONG_BREAK)}
-          className={`px-4 py-2 rounded-lg font-medium transition-all ${
+          className={`px-4 py-2 rounded-md font-medium transition-all ${
             mode === TIMER_MODES.LONG_BREAK
               ? 'bg-blue-500 text-white scale-105'
               : 'bg-gray-200 hover:bg-gray-300'
@@ -397,7 +397,7 @@ const PomodoroTimer = () => {
       <div className="flex gap-4 mb-6">
         <button
           onClick={toggleTimer}
-          className={`px-8 py-3 rounded-lg font-medium text-white transition-all transform hover:scale-105 ${
+          className={`px-8 py-3 rounded-md font-medium text-white transition-all transform hover:scale-105 ${
             mode === TIMER_MODES.POMODORO ? 'bg-red-500 hover:bg-red-600' :
             mode === TIMER_MODES.SHORT_BREAK ? 'bg-green-500 hover:bg-green-600' :
             'bg-blue-500 hover:bg-blue-600'
@@ -407,13 +407,13 @@ const PomodoroTimer = () => {
         </button>
         <button
           onClick={resetTimer}
-          className="px-6 py-3 rounded-lg font-medium bg-gray-200 hover:bg-gray-300 transition-all"
+          className="px-6 py-3 rounded-md font-medium bg-gray-200 hover:bg-gray-300 transition-all"
         >
           Reiniciar
         </button>
         <button
           onClick={skipTimer}
-          className="px-6 py-3 rounded-lg font-medium bg-gray-200 hover:bg-gray-300 transition-all"
+          className="px-6 py-3 rounded-md font-medium bg-gray-200 hover:bg-gray-300 transition-all"
         >
           Saltar
         </button>
